@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal</title>
+</head>
+<body>
+    <header> <%- include('header'); %></header>
+    <div style=" display: flex; justify-content: center;">
+        <ul id='todo-list' style="list-style: none;max-width: 400px; display: flex; flex-direction: column;">
+            <% orders.forEach(function(order){   
+                for (const property in order)    {     %>
+                    <%   %>
+                    <% if(order[property] ){ %>
+                        <%- include('myOrder', {order: property, num :order[property] }); %>
+                    <% }  %>
+                <% }
+            }); %>
+        </ul>
+
+    </div>
+    
+    <script>
+        var counter = 0
+    </script>
+</body>
+</html>

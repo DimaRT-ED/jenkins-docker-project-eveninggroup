@@ -1,0 +1,8 @@
+
+
+    <li ondblclick="getInput(event)" style="border: 1px solid;"> 
+        <input  type="text" value=" <%=  todo._id %> - <%=todo.title%> "  style="border: none"  id= <%= 'txt'+ todo._id %> readonly/>
+        <span  style='margin-left: 30%;'>Done<input ${todos.status} type="checkbox"/></span>
+        <input onclick="removeTodo(event)" type="button" value="Delete" item-id= <%=  todo._id %>  />
+        <input onclick="updateTodo(event)" type="button" value="Update" item-id=  <%=  todo._id %>  />
+    </li>

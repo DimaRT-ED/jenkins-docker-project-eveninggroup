@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>register</title>
+</head>
+<body>
+    <header> <%- include('header'); %></header>
+    <section
+    class="d-flex p-5   justify-content-md-evenly flex-sm-column  flex-column  align-items-sm-center py-sm-3 flex-md-row form-section "
+    id="form">
+    <div class=" border col-6  px-4 py-2   border-dark bg-white shadow-lg my-form ">
+        <form name="myform" active="" onSubmit="return submitcheck(this)">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                <input type="text.preventDefault()" name=fullname class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" required pattern="[a-zA-Z0-9]{3,20}">         
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">User Name</label>
+                <input type="text" class="form-control"  name=username  id="exampleInputEmail1" aria-describedby="emailHelp"
+                    required pattern="[a-zA-Z0-9]{3,20}">         
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Password</label>
+                <input type="password" class="form-control"  name="password"  id="exampleInputEmail1"
+                    aria-describedby="emailHelp" required pattern="[a-zA-Z0-9]{3,20}" size="30">
+            </div>
+        <div id="" class="d-flex justify-content-center pt-2 ">
+            <button class="btn btn-primary fs-4 ">Submit</button>
+        </div>
+        </form>
+    </div>
+</section>
+<script>
+        const SERVER_URL = 'http://localhost:3000';
+        const path = '/register';
+        myform.onsubmit = submitcheck= async(e)=>{
+        e.preventDefault()
+        console.log('register',myform.fullname.value)
+        const body = {
+            fullname:myform.fullname.value,
+            username:myform.username.value,
+            password:myform.password.value
+        }
+        const options = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        }
+        const user = await (await fetch(`${SERVER_URL}${path}`, options)).json();
+  }
+
+</script>
+</body>
+
+</html>

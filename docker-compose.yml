@@ -1,0 +1,33 @@
+version: '3'
+services:
+  database:
+    image: mysql:8.0
+    volumes:
+      - /home/dima/Docker/NewFol/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - app-network
+
+  application:
+    image: node:18.5.0
+    working_dir: /usr/src/app
+    volumes:
+      - /home/dima/Docker/NewFol/node-code:/usr/src/app
+    command: bash -c "npm start"
+    ports:
+      - "3044:3044"
+    environment:
+      MYSQL_HOST: database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+    depends_on:
+      - database
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

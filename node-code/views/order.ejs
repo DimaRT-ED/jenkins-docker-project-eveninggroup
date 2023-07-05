@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+</head>
+<body>
+    <header> <%- include('header'); %></header>
+    <div style="display:flex;justify-content:center">
+        <div   style="padding: 20px; " >
+            <div style="display:flex;  margin: auto; margin-left: 80px;" >
+                <div style="padding: 20px;">
+                    <div   style="cursor: pointer;"   id=0  > small hand cut fries <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644015986/Pizza/fries1_cbioms.jpg" alt="">  <button  onclick="order(this)" item-price="5.50">  +</button><button  onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div   style="cursor: pointer;"   id=1  > larg hand cut fries  <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644015989/Pizza/fries2_elq3yx.jpg" alt=""> <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div   style="cursor: pointer;"   id=2  > sweet potato fries <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644016366/Pizza/potato1_tz1xak.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div   style="cursor: pointer;"   id=3  > chicken tenders <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644016555/Pizza/tenders1_nig6w8.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                </div>
+                    <div style="padding: 20px;">
+                    <div   style="cursor: pointer;"   id=4  > cheese wedges <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644016723/Pizza/cheese1_itl9gg.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div   style="cursor: pointer;"   id=5  > beer battered mushrooms <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644016859/Pizza/mushrooms_neqwmt.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div    style="cursor: pointer;"   id=6  > breaded zucchini planks <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644020861/Pizza/planks_mooprk.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div   style="cursor: pointer;"   id=7  > chessy bread stickes <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644021055/Pizza/bread_v3fets.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                </div>
+            </div>
+
+            <div style="display:flex;">
+                <div style="padding: 20px;">
+                    <div    style="cursor: pointer;"   id=8 > CHEESE  SLICE <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644011681/Pizza/pizza2_inzl0z.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div    style="cursor: pointer;"   id=9 > VEGETABLE SLICE <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644011894/Pizza/pizza3_jrhmft.jpg" alt=""> <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div    style="cursor: pointer;"   id=10 > PEPPERONI SLICE  <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644012006/Pizza/pizza4_cdhyuv.jpg" alt="">  <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                </div>
+                <div  style="padding: 20px;">
+                    <div    style="cursor: pointer;"   id=11 > MUSHROOM SLICE <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644012464/Pizza/pizza6_sid3lk.jpg" alt=""> <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div    style="cursor: pointer;"   id=12 > DAILY VEGETARIAN SLICE <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644011153/Pizza/pizza1_xvvsld.jpg" alt=""> <button onclick="order(this)" item-price="5.50">+</button><button onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                    <div   style="cursor: pointer;"   id=13  > DAILY MEAT LOVERS SLICE <img style="width:10vw;height:10vw; border-radius: 8px;" src="https://res.cloudinary.com/omerphoto/image/upload/v1644016218/Pizza/pizza7_heavnj.jpg" alt=""> <button style="border-radius: 8px;" onclick="order(this)" item-price="5.50">+</button><button style="border-radius: 8px;" onclick="cancelOrder(this)" item-price="-5.50">-</button></div>
+                </div>
+            </div>
+            <div>   <%= loggedInUser.fullname %></div>
+            <button  onclick="submitOrder()" style="border-radius: 8px; padding: 4px 16px;" >Submit Order</button>
+        </div>
+        <div>
+            <div id="orderSumId">         
+            </div>
+            <div id="totalOrderId">         
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const menu = [{amount: 0,txt: 'small hand cut fries',price:5.50},{amount: 0,txt:'larg hand cut fries',price:7.50},{amount: 0,txt: 'sweet potato fries',price:4.50},{amount: 0,txt:'chicken tenders',price:6.50},{amount: 0,txt: 'cheese wedges',price:5.50},{amount: 0,txt:'beer battered mushrooms',price:5.50},{amount: 0,txt:'breaded zucchini planks',price:5.50},{amount: 0,txt:'chessy bread stickes',price:5.50},{amount: 0,txt:'CHEESE  SLICE',price:5.50},{amount: 0,txt:'VEGETABLE SLICE',price:2.25},{amount: 0,txt:'PEPPERONI SLICE',price:3.50},{amount: 0,txt:' MUSHROOM SLICE',price: 2.75},{amount: 0,txt:'DAILY VEGETARIAN SLICE',price:2.40},{amount: 0,txt:'DAILY MEAT LOVERS SLICE',price:3.50}]
+    const thisOrder = []
+    const allOrders = []
+    const SERVER_URL = 'http://localhost:3000';
+    const path = '/order';
+    var totalOrder = 0
+    var orderNumber = 0
+
+    function clearTheMenu (){
+        menu.forEach(order=>{
+            order.amount = 0
+        })
+    }
+
+    function clearTheOrders (){
+        for (let i=0;i<14;i++){
+            thisOrder[i]=0   
+        }
+        totalOrder = 0
+        const elCount = document.getElementById('orderSumId')
+        elCount.innerText=`Total : $ ${totalOrder}`
+    }
+
+    clearTheOrders()
+
+    order=(e)=>{
+        console.log('orderrrrr',e.parentNode.id)
+        const orderId = e.parentNode.id
+        thisOrder[orderId]++
+        menu[orderId].amount++
+        const elCount = document.getElementById('orderSumId')
+        const ip= e.getAttribute('item-price')
+        const num = parseInt(ip)
+        totalOrder += num
+        elCount.innerText=`Total : $ ${totalOrder}`
+    }
+    cancelOrder=(e)=>{
+        console.log('orderrrrr',e.parentNode.id)
+        const orderId = e.parentNode.id
+        if(thisOrder[orderId]<=0){
+            return 
+        }
+        thisOrder[orderId]--
+        menu[orderId].amount--
+        const elCount = document.getElementById('orderSumId')
+        const ip= e.getAttribute('item-price')
+        const num = parseInt(ip)
+        totalOrder += num
+        elCount.innerText=`Total : $${totalOrder}`
+    }
+    submitOrder= async()=>{
+        const body = {
+            order : thisOrder
+        }
+        const options = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(menu)
+        }
+        console.log('thisOrder before submit',menu)
+        const orderFromDB =  await (await fetch(`${SERVER_URL}${path}`, options));
+        clearTheOrders()
+        const elTotalOrder = document.getElementById('totalOrderId')
+        orderNumber++
+       // elTotalOrder.innerText = `Order Numer : ${orderNumber}`
+        var strHTML = `<div style="font-weight: 800" > Order Numer : ${orderNumber} </div>`
+        strHTML += menu.map(element => {
+            if(element.amount){
+                // elTotalOrder.innerHtml+=`${element.txt} ,amount : ${element.amount}`
+                    return `<div class="" >
+                        ${element.txt}  : ${element.amount}
+                            </div>`
+            }else{
+                return ''
+            }
+        }).join('')
+        //     }
+            
+        // });
+       // console.log('strHTML',strHTML)
+        allOrders.push(strHTML)
+        elTotalOrder.innerHTML+=strHTML
+        console.log('thisOrder after submit')
+        clearTheMenu()
+    }
+</script>
+</html>
